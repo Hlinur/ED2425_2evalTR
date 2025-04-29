@@ -2,11 +2,9 @@ public class Descuento {
     public static double calculateDiscount(int productCount, double totalPrice, boolean isPremiumMember) {
         double discount = 0;
 
-        if (productCount < 5) {
-            discount += 0;
-        } else if (productCount < 10) {
+        if (productCount >= 5 && productCount < 10) {
             discount += 0.1;
-        } else {
+        } else if (productCount >= 10) {
             discount += 0.15;
         }
 
